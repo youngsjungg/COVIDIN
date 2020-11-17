@@ -9,7 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
+import android.view.WindowManager;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -25,7 +27,12 @@ public class SplashActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceStare) {
         super.onCreate(savedInstanceStare);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//인트로 전체화면
         setContentView(R.layout.activity_splash);
+
+
+
+
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -46,4 +53,5 @@ public class SplashActivity extends AppCompatActivity {
 
 
     }
+
 }
