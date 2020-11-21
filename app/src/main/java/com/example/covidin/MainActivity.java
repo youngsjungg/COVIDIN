@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
 
         String queryUrl="http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?" +
                 "serviceKey=INtNC54XZqdLzdO%2BaPP5sO9ZR3%2FgW1z7IbGhd6uPOuYaTmB5iYtZKJLRme9rlEEn23GBSkUNSIJUZYQ%2FygATHw%3D%3D" +
-                "&pageNo=1&numOfRows=10&startCreateDt=20200410&endCreateDt=20200410";
+                "&pageNo=1&numOfRows=10&startCreateDt=20201121&endCreateDt=20201121";
 
         try {
             URL url= new URL(queryUrl);//문자열로 된 요청 url을 URL 객체로 생성.
@@ -109,56 +109,63 @@ public class MainActivity extends Activity {
                             buffer.append(xpp.getText());//category 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             buffer.append("\n");//줄바꿈 문자 추가
                         }
-//                        else if(tag.equals("cpId")){
-//                            buffer.append("충전소ID :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//description 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("\n");//줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("cpNm")){
-//                            buffer.append("충전기 명칭 :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//telephone 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("\n");//줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("cpStat")){
-//                            buffer.append("충전기 상태 코드 :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//address 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("\n");//줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("cpTp")){
-//                            buffer.append("충전 방식 :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//mapx 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("  ,  "); //줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("csId")){
-//                            buffer.append("충전소 ID :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("\n"); //줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("cpNm")){
-//                            buffer.append("충전소 명칭 :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("\n"); //줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("lat")){
-//                            buffer.append("위도 :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("\n"); //줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("longi")){
-//                            buffer.append("경도 :");
-//                            xpp.next();
-//                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-//                            buffer.append("\n"); //줄바꿈 문자 추가
-//                        }
-//                        else if(tag.equals("statUpdateDatetime")){
-//                            buffer.append("충전기상태갱신시각 :");
+                        else if(tag.equals("defCnt")){
+                            buffer.append("확진자 수 :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//description 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n");//줄바꿈 문자 추가
+                        }
+                        else if(tag.equals("gubun")){
+                            buffer.append("시도 :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//telephone 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n");//줄바꿈 문자 추가
+                        }
+                        else if(tag.equals("incDec")){
+                            buffer.append("전일대비 증감 수  :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//address 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n");//줄바꿈 문자 추가
+                        }
+                        else if(tag.equals("isolㅣClearCnt")){
+                            buffer.append("격리 해제 수   :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//mapx 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append(" \n "); //줄바꿈 문자 추가
+                        }
+                        else if(tag.equals("isollngCnt")){
+                            buffer.append("격리중 환자수 :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n"); //줄바꿈 문자 추가
+                        }
+                        else if(tag.equals("localOccCnt")){
+                            buffer.append("지역발생 수  :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n"); //줄바꿈 문자 추가
+                        }
+                        else if(tag.equals("overFlowCnt")){
+                            buffer.append("해외 유입 수 :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n"); //줄바꿈 문자 추가
+                        }
+
+                        else if(tag.equals("seq")){
+                            buffer.append("게시글번호  :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n"); //줄바꿈 문자 추가
+                        }
+                        else if(tag.equals("stdDay")){
+                            buffer.append("기준일시  :");
+                            xpp.next();
+                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n"); //줄바꿈 문자 추가
+                        }
+//                        else if(tag.equals("updateDt")){
+//                            buffer.append("수정일시분초  :");
 //                            xpp.next();
 //                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
 //                            buffer.append("\n"); //줄바꿈 문자 추가
