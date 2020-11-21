@@ -70,9 +70,14 @@ public class MainActivity extends Activity {
         String location = URLEncoder.encode(str);//한글의 경우 인식이 안되기에 utf-8 방식으로 encoding..
 
 
+//        String queryUrl="http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?" +
+//                "serviceKey=INtNC54XZqdLzdO%2BaPP5sO9ZR3%2FgW1z7IbGhd6uPOuYaTmB5iYtZKJLRme9rlEEn23GBSkUNSIJUZYQ%2FygATHw%3D%3D" +
+//                "&pageNo=1&numOfRows=10 &startCreateDt=20201121&endCreateDt=20201121";
+//
+
         String queryUrl="http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?" +
                 "serviceKey=INtNC54XZqdLzdO%2BaPP5sO9ZR3%2FgW1z7IbGhd6uPOuYaTmB5iYtZKJLRme9rlEEn23GBSkUNSIJUZYQ%2FygATHw%3D%3D" +
-                "&pageNo=1&numOfRows=10&startCreateDt=20201121&endCreateDt=20201121";
+                "&pageNo=1&numOfRows=10";
 
         try {
             URL url= new URL(queryUrl);//문자열로 된 요청 url을 URL 객체로 생성.
