@@ -8,38 +8,49 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:weightSum="10">
 
-        <EditText
-            android:id="@+id/edit"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:hint="enter text to search"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="200dp"
+        android:spinnerMode="dropdown">
+    </Spinner>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="search"
-            android:textSize="12sp"
-            android:onClick="mOnClick"/>
 
-    </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="10">-->
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="8sp"
-            android:textStyle="bold"/>
+<!--        <EditText-->
+<!--            android:id="@+id/edit"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:hint="enter text to search"/>-->
 
-    </ScrollView>
+<!--        <Button-->
+<!--            android:id="@+id/button"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="search"-->
+<!--            android:textSize="12sp"-->
+<!--            android:onClick="mOnClick"/>-->
+
+<!--    </LinearLayout>-->
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/result"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:textSize="8sp"-->
+<!--            android:textStyle="bold"/>-->
+
+<!--    </ScrollView>-->
 </LinearLayout>
