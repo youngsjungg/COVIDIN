@@ -4,7 +4,7 @@
 
     <string-array name="sido">
 
-<!--        <item>지역을 선택하세요</item>-->
+        <item>지역을 선택하세요</item>
         <item>제주</item>
         <item>경남</item>
         <item>경북</item>
