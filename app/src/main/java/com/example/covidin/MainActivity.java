@@ -22,67 +22,13 @@ import android.widget.Spinner;
 
 public class MainActivity extends Activity {
 
-    Button btn_sp;
-    ArrayList arrayList;
-    Spinner spinner;
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        arrayList = new ArrayList();
-        arrayList.add("제주");
-        arrayList.add("경남");
-        arrayList.add("경북");
-
-
-        final String[] select_item = {""};
-
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this, android.R.layout.simple_spinner_dropdown_item, arrayList);
-        spinner.setAdapter(adapter);
-
-        Button button = (Button) findViewById(R.id.btn_sp);
-
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                select_item[0] = String.valueOf(arrayList.get(arg2));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-
-            }
-        });
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (select_item[0].equals("제주")) {
-                    Intent intent = new Intent(MainActivity.this, Activity1.class);
-                    startActivity(intent);
-                    finish();
-
-                } else if (select_item[0].equals("경남")) {
-                    Intent intent = new Intent(MainActivity.this, Activity1.class);
-                    startActivity(intent);
-                    finish();
-                }
-                else if (select_item[0].equals("경북")) {
-                    Intent intent = new Intent(MainActivity.this, Activity1.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }
-        });
 
 
     }
@@ -92,6 +38,7 @@ public class MainActivity extends Activity {
 
 
 
+     
 
 
 
