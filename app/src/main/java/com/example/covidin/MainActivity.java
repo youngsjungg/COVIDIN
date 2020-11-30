@@ -22,20 +22,32 @@ import android.widget.Spinner;
 
 public class MainActivity extends Activity {
 
-
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
 
 
+        spinner = findViewById(R.id.spinner);
+
+        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this, R.array.sido, android.R.layout.simple_spinner_dropdown_item);
+        monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(monthAdapter); //어댑터에 연결해줍니다.
+
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
+        });
     }
-
-
 }
-
 
 
      
