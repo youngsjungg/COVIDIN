@@ -2,4 +2,6 @@
 <resources>
     <item name="edit" type="id" />
     <item name="result" type="id" />
+    <item name="spinner" type="id" />
+    <item name="btn_sp" type="id" />
 </resources>

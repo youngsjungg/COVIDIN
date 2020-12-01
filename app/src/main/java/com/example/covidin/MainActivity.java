@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.example.covidin.R;
+
 
 public class MainActivity extends Activity {
 
