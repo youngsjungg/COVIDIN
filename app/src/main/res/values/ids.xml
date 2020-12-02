@@ -4,4 +4,5 @@
     <item name="result" type="id" />
     <item name="spinner" type="id" />
     <item name="btn_sp" type="id" />
+    <item name="activity_serva" type="id" />
 </resources>
