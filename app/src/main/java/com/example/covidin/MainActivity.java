@@ -30,28 +30,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);}
-
-        public void onClick (View view) {
-            startActivity(new Intent("servaActivity"));
-        }
-
-
-
-        final TextView textView = (TextView)findViewById(R.id.text2);
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);
-
-       
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected Object parent;
-        (AdapterView<?> parent, View view, int position, long id) {
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) { }
-        });
+        setContentView(R.layout.activity_main);
     }
+
 }
+
+
 
 
 
