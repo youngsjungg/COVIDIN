@@ -9,31 +9,22 @@
     android:padding="10dp">
 
 
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:gravity="center_horizontal"-->
-<!--        android:text="#의료진 덕분에 "-->
-<!--        android:textSize="27sp" />-->
-
-
-
-
     <ImageView
         android:id="@+id/ch"
         android:layout_width="150dp"
         android:layout_height="120dp"
         android:src="@drawable/de"
-        android:layout_gravity="center"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="도시를 검색하세요"
+        android:textSize="27dp"
         />
 
 
-
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/sede"/>
 
 
 
