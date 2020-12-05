@@ -9,4 +9,12 @@
     android:padding="10dp">
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="도시를 검색하세요"
+        android:textSize="24sp" />
+
+
 </LinearLayout>
