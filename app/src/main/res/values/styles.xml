@@ -4,7 +4,8 @@
 
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#ECDB47</item> // 상태바 색
+        <item name="colorPrimaryDark">#acebe2
+        </item> // 상태바 색
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
