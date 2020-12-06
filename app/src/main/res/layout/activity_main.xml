@@ -16,17 +16,16 @@
         android:src="@drawable/de"
         android:layout_gravity="center"/>
 
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="105dp"
         android:text="도시를 검색하세요"
         android:textSize="27dp"
-        />
-
-
-
-
+        android:fontFamily="@font/qk"
+        android:gravity="center|right"
+         />
 
 
 </LinearLayout>
+
