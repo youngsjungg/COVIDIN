@@ -34,7 +34,7 @@
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
         android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         app:queryHint="  지역을 검색하세요 "
         android:gravity="center_vertical"
         app:iconifiedByDefault="false"/>
@@ -43,8 +43,8 @@
           android:layout_width="60dp"
           android:layout_height="50dp"
           android:text="검색 "
-          android:layout_margin="35sp"
-          android:layout_gravity=""/>
+          android:layout_margin="1sp"
+          />
 
   </LinearLayout>
 
