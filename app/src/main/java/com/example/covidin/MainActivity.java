@@ -23,6 +23,10 @@ import android.widget.Toast;
 
 import com.example.covidin.R;
 
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.http.GET;
+
 
 public class MainActivity extends Activity {
 
@@ -32,6 +36,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
 //        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
