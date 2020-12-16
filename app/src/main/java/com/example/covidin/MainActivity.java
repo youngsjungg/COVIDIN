@@ -38,17 +38,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
-
-//        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                searchMovie(query!!)
-//                return false
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                return false
-//            }
-//        })
     }
 
 
