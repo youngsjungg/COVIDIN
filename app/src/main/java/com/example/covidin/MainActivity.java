@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.file.attribute.AclEntry;
 import java.util.ArrayList;
 
 import android.widget.ArrayAdapter;
@@ -25,10 +26,16 @@ import com.example.covidin.R;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.Retrofit;
+//import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 import retrofit2.http.GET;
+
+//import static retrofit2.converter.gson.GsonConverterFactory.*;
 
 
 public class MainActivity extends Activity {
+
 
 
 
@@ -37,11 +44,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
 
+//     Retrofit retrofit = new Retrofit.Builder()
+//             .baseUrl("https://www.data.go.kr")
+//             .addCallAdapterFactory(SimpleXmlConverterFactory.create())
+//             .build();
+//
     }
 
 
-}
 
 
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">COVIDIN</string>
+    <string name = "baseUrl">https://www.data.go.kr/</string>
 </resources>
