@@ -94,9 +94,13 @@
 //
 //
 //
+//<<OTHER>>
 //
-//
-//
+////     Retrofit retrofit = new Retrofit.Builder()
+////             .baseUrl("https://www.data.go.kr")
+////             .addCallAdapterFactory(SimpleXmlConverterFactory.create())
+////             .build();
+////
 //
 //
 //
