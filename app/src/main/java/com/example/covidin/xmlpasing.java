@@ -150,7 +150,7 @@
 //                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
 //                            buffer.append("\n"); //줄바꿈 문자 추가
 //                        }
-//                        else if(tag.equals("overFlowCnt")){
+//                        else if(tag.equals("localOccCnt")){
 //                            buffer.append("해외 유입 수 :");
 //                            xpp.next();
 //                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
