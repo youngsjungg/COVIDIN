@@ -23,15 +23,15 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.covidin.R;
-
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Retrofit;
-//import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
-import retrofit2.http.GET;
-
-//import static retrofit2.converter.gson.GsonConverterFactory.*;
+//
+//import okhttp3.ResponseBody;
+//import retrofit2.Call;
+//import retrofit2.Retrofit;
+////import retrofit2.converter.gson.GsonConverterFactory;
+//import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
+//import retrofit2.http.GET;
+//
+////import static retrofit2.converter.gson.GsonConverterFactory.*;
 
 
 public class MainActivity extends Activity {
@@ -55,10 +55,12 @@ public class MainActivity extends Activity {
         text = (TextView) findViewById(R.id.result);
     }
 
+
+
     //Button을 클릭했을 때 자동으로 호출되는 callback method....
     public void mOnClick(View v) {
         switch (v.getId()) {
-            case R.id.button:
+            case R.id.btn_sv:
 
                 //Android 4.0 이상 부터는 네트워크를 이용할 때 반드시 Thread 사용해야 함
                 new Thread(new Runnable() {
@@ -88,9 +90,21 @@ public class MainActivity extends Activity {
     String getXmlData() {
 
         StringBuffer buffer = new StringBuffer();
+//        String str= searchView.getText().toString();//EditText에 작성된 Text얻어오기
+//        String location = URLEncoder.encode(str);
 
-        String str = edit.getText().toString();//EditText에 작성된 Text얻어오기
-        String location = URLEncoder.encode(str);//한글의 경우 인식이 안되기에 utf-8 방식으로 encoding..
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//                                              @Override
+//                                              public boolean onQueryTextSubmit(String query) {
+//                                                  return false;
+//                                              }
+//
+//                                              @Override
+//                                              public boolean onQueryTextChange(String newText) {
+//                                                  return false;
+//                                              }
+
+
 
 //
 ////        String queryUrl="http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?" +

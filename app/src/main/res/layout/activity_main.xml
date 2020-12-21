@@ -40,6 +40,7 @@
         app:iconifiedByDefault="false"/>
 
       <Button
+          android:id="@+id/btn_sv"
           android:layout_width="60dp"
           android:layout_height="50dp"
           android:text="검색 "
