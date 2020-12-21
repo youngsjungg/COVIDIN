@@ -37,78 +37,20 @@ import retrofit2.http.GET;
 public class MainActivity extends Activity {
 
 
-     private final String TAG = "BT";
-     private final String key = "INtNC54XZqdLzdO%2BaPP5sO9ZR3%2FgW1z7IbGhd6uPOuYaTmB5iYtZKJLRme9rlEEn23GBSkUNSIJUZYQ%2FygATHw%3D%3D";
-     private final String endPoint = "INtNC54XZqdLzdO%2BaPP5sO9ZR3%2FgW1z7IbGhd6uPOuYaTmB5iYtZKJLRme9rlEEn23GBSkUNSIJUZYQ%2FygATHw%3D%3D";
-
-     private SearchView xmlGUBUN;//xml변수
-
-    private URL url;
-    private InputStream is;
-    private XmlPullParserFactory factory;
-    private XmlPullParser xpp;
-    private String tag;
-    private int eventType;
-
-
-    private String GUBUN;//도시
-    private StringBuffer buffer;
-
-    private String createDt;
-    private String deathCnt;
-    private String defCnt;
-    private String gubun;
-    private String incDec;
-    private String isolClearCnt;
-    private String isolIngCnt;
-    private String localOccCnt;
-    private String overFlowCnt;
-    private String seq;
-    private String stdDay;
-    private String updateDt;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getXmlId();
-        butter = new StringBuffer();
-
-
     }
-
-    private void getXmlId() {
-    }
-
-    public void search(View view) {
-        GUBUN = xmlGUBUN.getText().toString();
-        createDt = deathCnt = defCnt = gubun = incDec = isolClearCnt = isolIngCnt=localOccCnt= overFlowCnt=seq=stdDay=updateDt=null;
-        buffer = null;
-        buffer = new StringBuffer();
-
-        if(exmineData()) {
-            // 입력값 검사 함수에서 true를 return할 경우 값이 잘못된 것..
-            // 종료..
-            return;
-
-
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    getGUBUN(GUBUN);
-
-
 
 
     }
 
 
 
-}
+
 
 
 
