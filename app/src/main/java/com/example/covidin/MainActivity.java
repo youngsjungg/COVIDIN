@@ -83,34 +83,13 @@ public class MainActivity extends Activity {
                 }).start();
                 break;
         }
-    }//mOnClick method..
+    }
 
 
-    //XmlPullParser를 이용하여 Naver 에서 제공하는 OpenAPI XML 파일 파싱하기(parsing)
     String getXmlData() {
 
         StringBuffer buffer = new StringBuffer();
-//        String str= searchView.getText().toString();//EditText에 작성된 Text얻어오기
-//        String location = URLEncoder.encode(str);
 
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//                                              @Override
-//                                              public boolean onQueryTextSubmit(String query) {
-//                                                  return false;
-//                                              }
-//
-//                                              @Override
-//                                              public boolean onQueryTextChange(String newText) {
-//                                                  return false;
-//                                              }
-
-
-
-//
-////        String queryUrl="http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?" +
-////                "serviceKey=INtNC54XZqdLzdO%2BaPP5sO9ZR3%2FgW1z7IbGhd6uPOuYaTmB5iYtZKJLRme9rlEEn23GBSkUNSIJUZYQ%2FygATHw%3D%3D" +
-////                "&pageNo=1&numOfRows=10 &startCreateDt=20201121&endCreateDt=20201121";
-////
 
         String queryUrl = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?" +
                 "serviceKey=INtNC54XZqdLzdO%2BaPP5sO9ZR3%2FgW1z7IbGhd6uPOuYaTmB5iYtZKJLRme9rlEEn23GBSkUNSIJUZYQ%2FygATHw%3D%3D" +
@@ -139,8 +118,8 @@ public class MainActivity extends Activity {
                         tag = xpp.getName();//테그 이름 얻어오기
 
                         if (tag.equals("item")) ;// 첫번째 검색결과
-                        else if (tag.equals("createDt")) {
-                            buffer.append("등록일시분 : ");
+                        else if (tag.equals("gubun")) {
+                            buffer.append("시도 : ");
                             xpp.next();
                             buffer.append(xpp.getText());//title 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             buffer.append("\n"); //줄바꿈 문자 추가
@@ -154,8 +133,8 @@ public class MainActivity extends Activity {
                             xpp.next();
                             buffer.append(xpp.getText());//description 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             buffer.append("\n");//줄바꿈 문자 추가
-                        } else if (tag.equals("gubun")) {
-                            buffer.append("시도 :");
+                        } else if (tag.equals("createDt ")) {
+                            buffer.append("등록일시분 :");
                             xpp.next();
                             buffer.append(xpp.getText());//telephone 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             buffer.append("\n");//줄바꿈 문자 추가
