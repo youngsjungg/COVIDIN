@@ -26,44 +26,69 @@
         android:gravity="center|right"
          />
 
-
-  <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent">
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        app:queryHint="  지역을 검색하세요 "
-        android:gravity="center_vertical"
-        app:iconifiedByDefault="false"/>
+        android:orientation="horizontal"
+        android:layout_marginLeft="45dp"
+        >
 
-      <Button
-          android:id="@+id/btn_sv"
-          android:layout_width="60dp"
-          android:layout_height="50dp"
-          android:text="검색 "
-          android:layout_margin="1sp"
-          />
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/qk"
+            android:hint="도시를 검색하세요 "
 
-  </LinearLayout>
+            />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/qk"
+            android:text="검색"
+            android:textSize="12sp"
+            android:onClick="mOnClick"/>
 
-      <ScrollView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
+    </LinearLayout>
 
-          <TextView
-              android:id="@+id/result"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:textSize="8sp"
-              android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-      </ScrollView>
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="8sp"
+            android:textStyle="bold"/>
 
+    </ScrollView>
 
 
 </LinearLayout>
 
+
+
+    <!--  <LinearLayout-->
+    <!--    android:layout_width="wrap_content"-->
+    <!--    android:layout_height="match_parent">-->
+
+    <!--    <androidx.appcompat.widget.SearchView-->
+    <!--        android:id="@+id/search_view"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        app:queryHint="  지역을 검색하세요 "-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        app:iconifiedByDefault="false"/>-->
+
+    <!--      <Button-->
+    <!--          android:id="@+id/btn_sv"-->
+    <!--          android:layout_width="60dp"-->
+    <!--          android:layout_height="50dp"-->
+    <!--          android:text="검색 "-->
+    <!--          android:layout_margin="1sp"-->
+    <!--          />-->
+
+    <!--  </LinearLayout>-->
