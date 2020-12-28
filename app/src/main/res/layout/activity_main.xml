@@ -39,6 +39,7 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/qk"
             android:hint="도시를 검색하세요 "
+            android:onClick="mOnClick"
 
             />
 

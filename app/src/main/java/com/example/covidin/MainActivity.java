@@ -123,11 +123,14 @@ public class MainActivity extends Activity {
                             xpp.next();
                             buffer.append(xpp.getText());//title 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             buffer.append("\n"); //줄바꿈 문자 추가
-                        } else if (tag.equals("deathCnt")) {
-                            buffer.append("사망자  : ");
+                        }
+                        else if (tag.equals("stdDay")) {
+                            buffer.append("기준일시  :");
                             xpp.next();
-                            buffer.append(xpp.getText());//category 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
+                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n"); //줄바꿈 문자 추가
+
+
                         } else if (tag.equals("defCnt")) {
                             buffer.append("확진자 수 :");
                             xpp.next();
@@ -168,11 +171,11 @@ public class MainActivity extends Activity {
                             xpp.next();
                             buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
                             buffer.append("\n"); //줄바꿈 문자 추가
-                        } else if (tag.equals("stdDay")) {
-                            buffer.append("기준일시  :");
+                        } else if (tag.equals("deathCnt")) {
+                            buffer.append("사망자  : ");
                             xpp.next();
-                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n"); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());//category 요소의 TEXT 읽어와서 문자열버퍼에 추가
+                            buffer.append("\n");//줄바꿈 문자 추가
                         }
 //                        else if(tag.equals("updateDt")){
 //                            buffer.append("수정일시분초  :");
@@ -206,9 +209,6 @@ public class MainActivity extends Activity {
 
 
 }
-
-
-
 
 
 
