@@ -57,21 +57,17 @@ public class MainActivity extends Activity {
 
 
 
-    //Button을 클릭했을 때 자동으로 호출되는 callback method....
     public void mOnClick(View v) {
         switch (v.getId()) {
             case R.id.button:
 
-                //Android 4.0 이상 부터는 네트워크를 이용할 때 반드시 Thread 사용해야 함
+
                 new Thread(new Runnable() {
 
                     @Override
                     public void run() {
                         // TODO Auto-generated method stub
-                        data = getXmlData();//아래 메소드를 호출하여 XML data를 파싱해서 String 객체로 얻어오기
-
-                        //UI Thread(Main Thread)를 제외한 어떤 Thread도 화면을 변경할 수 없기때문에
-                        //runOnUiThread()를 이용하여 UI Thread가 TextView 글씨 변경하도록 함
+                        data = getXmlData();
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -96,12 +92,12 @@ public class MainActivity extends Activity {
                 "&pageNo=1&numOfRows=10";
 
         try {
-            URL url = new URL(queryUrl);//문자열로 된 요청 url을 URL 객체로 생성.
-            InputStream is = url.openStream(); //url위치로 입력스트림 연결
+            URL url = new URL(queryUrl);
+            InputStream is = url.openStream();
 
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             XmlPullParser xpp = factory.newPullParser();
-            xpp.setInput(new InputStreamReader(is, "UTF-8")); //inputstream 으로부터 xml 입력받기
+            xpp.setInput(new InputStreamReader(is, "UTF-8"));
 
             String tag;
 
@@ -115,67 +111,67 @@ public class MainActivity extends Activity {
                         break;
 
                     case XmlPullParser.START_TAG:
-                        tag = xpp.getName();//테그 이름 얻어오기
+                        tag = xpp.getName();
 
-                        if (tag.equals("item")) ;// 첫번째 검색결과
+                        if (tag.equals("item")) ;
                         else if (tag.equals("gubun")) {
                             buffer.append("시도 : ");
                             xpp.next();
-                            buffer.append(xpp.getText());//title 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n"); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         }
                         else if (tag.equals("stdDay")) {
                             buffer.append("기준일시  :");
                             xpp.next();
-                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n"); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
 
 
                         } else if (tag.equals("defCnt")) {
                             buffer.append("확진자 수 :");
                             xpp.next();
-                            buffer.append(xpp.getText());//description 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         } else if (tag.equals("createDt ")) {
                             buffer.append("등록일시분 :");
                             xpp.next();
-                            buffer.append(xpp.getText());//telephone 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         } else if (tag.equals("incDec")) {
                             buffer.append("전일대비 증감 수  :");
                             xpp.next();
-                            buffer.append(xpp.getText());//address 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         } else if (tag.equals("isolClearCnt")) {
                             buffer.append("격리 해제 수   :");
                             xpp.next();
-                            buffer.append(xpp.getText());//mapx 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append(" \n "); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append(" \n ");
                         } else if (tag.equals("isolIngCnt")) {
                             buffer.append("격리중 환자수 :");
                             xpp.next();
-                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n"); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         } else if (tag.equals("localOccCnt")) {
                             buffer.append("지역발생 수  :");
                             xpp.next();
-                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n"); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         } else if (tag.equals("overFlowCnt")) {
                             buffer.append("해외 유입 수 :");
                             xpp.next();
-                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n"); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         } else if (tag.equals("seq")) {
                             buffer.append("게시글번호  :");
                             xpp.next();
-                            buffer.append(xpp.getText());//mapy 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n"); //줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         } else if (tag.equals("deathCnt")) {
                             buffer.append("사망자  : ");
                             xpp.next();
-                            buffer.append(xpp.getText());//category 요소의 TEXT 읽어와서 문자열버퍼에 추가
-                            buffer.append("\n");//줄바꿈 문자 추가
+                            buffer.append(xpp.getText());
+                            buffer.append("\n");
                         }
 //                        else if(tag.equals("updateDt")){
 //                            buffer.append("수정일시분초  :");
@@ -189,9 +185,9 @@ public class MainActivity extends Activity {
                         break;
 
                     case XmlPullParser.END_TAG:
-                        tag = xpp.getName(); //테그 이름 얻어오기
+                        tag = xpp.getName();
 
-                        if (tag.equals("item")) buffer.append("\n");// 첫번째 검색결과종료..줄바꿈
+                        if (tag.equals("item")) buffer.append("\n");
                         break;
                 }
 
@@ -202,8 +198,8 @@ public class MainActivity extends Activity {
             // TODO Auto-generated catch blocke.printStackTrace();
         }
 
-        buffer.append("파싱 끝\n");
-        return buffer.toString();//StringBuffer 문자열 객체 반환
+        buffer.append("파싱 완료 \n");
+        return buffer.toString();
 
     }
 
